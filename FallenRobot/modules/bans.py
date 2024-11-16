@@ -1,12 +1,15 @@
-from telegram import ChatPermissions
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+import html
+
+from telegram import (
+    ChatPermissions,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    ParseMode,
+    Update,
+)
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters
-from telegram.ext import CallbackQueryHandler
 from telegram.utils.helpers import mention_html
-
-import html
-import asyncio
 
 from FallenRobot import (
     DEMONS,
@@ -79,7 +82,9 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("chal be ya mera owner mere bus ki na hai isko ban karna tu khud dekh le 😔")
+            message.reply_text(
+                "chal be ya mera owner mere bus ki na hai isko ban karna tu khud dekh le 😔"
+            )
         elif user_id in DEV_USERS:
             message.reply_text("I can't act against our own.")
         elif user_id in DRAGONS:
