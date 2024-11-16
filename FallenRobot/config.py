@@ -25,7 +25,7 @@ class Config(object):
     OWNER_ID = 7078181502  # User id of your telegram account (Must be integer)
 
     OWNER_USERNAME = "Xeno_Kakarot"
-    
+
     # Optional fields
     BL_CHATS = []  # List of groups that you want blacklisted.
     DRAGONS = []  # User id of sudo users
