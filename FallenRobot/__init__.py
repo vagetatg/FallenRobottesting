@@ -46,6 +46,7 @@ if ENV:
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
     START_IMG = os.environ.get("START_IMG", "https://files.catbox.moe/qs7igd.jpg")
+    PM_START_IMG = os.environ.get("PM_START_IMG", None)
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "lolpagalokigc")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
