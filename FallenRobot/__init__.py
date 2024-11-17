@@ -100,12 +100,15 @@ else:
     LOAD = Config.LOAD
     MONGO_DB_URI = Config.MONGO_DB_URI
     NO_LOAD = Config.NO_LOAD
-    START_IMG = Config.START_IMG
+    START_IMG = os.environ.get(
+        "START_IMG", "https://telegra.ph/file/31f2989f6306e8bbf1aa9.jpg"
+    )
+    PM_START_IMG = os.environ.get("PM_START_IMG", None)
     STRICT_GBAN = Config.STRICT_GBAN
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
     TOKEN = Config.TOKEN
-    TIME_API_KEY = Config.TIME_API_KEY
+    TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
     WORKERS = Config.WORKERS
 
     try:
