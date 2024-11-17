@@ -1,17 +1,13 @@
 import importlib
 import re
 import time
-import asyncio
-
-
-from telethon import __version__ as tlhver
 from platform import python_version as y
-from sys import argv
 from random import choice
+from sys import argv
 
 from pyrogram import __version__ as pyrover
-from telegram import __version__ as telever
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+from telegram import __version__ as telever
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -27,7 +23,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
-from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
 from telethon import __version__ as tlhver
 
@@ -38,7 +34,6 @@ from FallenRobot import (
     BOT_USERNAME,
     LOGGER,
     OWNER_ID,
-    START_IMG,
     PM_START_IMG,
     SUPPORT_CHAT,
     TOKEN,
