@@ -291,12 +291,6 @@ def error_callback(update: Update, context: CallbackContext):
     except Unauthorized:
         print("no nono1")
         print(error)
-        # remove update.message.chat_id from conversation list
-    except BadRequest:
-        print("no nono2")
-        print("BadRequest caught")
-        print(error)
-
         # handle malformed requests - read more below!
     except TimedOut:
         print("no nono3")
