@@ -1,7 +1,7 @@
 import time
 
-from RaidenRobot import StartTime, dispatcher
-from RaidenRobot.modules.disable import DisableAbleCommandHandler
+from FallenRobot import StartTime, dispatcher
+from FallenRobot.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext
 
