@@ -75,15 +75,15 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_IMG = "https://telegra.ph/file/ca85acf32b0c086c340b8.jpg"
+PM_START_IMG = "https://files.catbox.moe/2malxb.jpg"
 
 PHOTO = [
-    "https://telegra.ph/file/062a222627806c46e965b.jpg",
+    "https://files.catbox.moe/2malxb.jpg",
 ]
 
 
 IMG = [
-    "https://telegra.ph/file/062a222627806c46e965b.jpg",
+    "https://files.catbox.moe/2malxb.jpg",
 ]
 
 
