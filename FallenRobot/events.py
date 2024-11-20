@@ -31,6 +31,15 @@ def register(**args):
     return decorator
 
 
+
+def Asuinline(**args):
+    def decorator(func):
+        telethn.add_event_handler(func, events.CallbackQuery(**args))
+        return func
+
+    return decorator
+  
+
 def chataction(**args):
     """Registers chat actions."""
 
