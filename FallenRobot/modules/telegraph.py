@@ -2,10 +2,9 @@ import os
 from datetime import datetime
 
 from PIL import Image
-from telegraph import Telegraph, exceptions, upload_file
-
 from RaidenRobot import telethn as tbot
 from RaidenRobot.events import register
+from telegraph import Telegraph, exceptions, upload_file
 
 Anonymous = "Raiden"
 
