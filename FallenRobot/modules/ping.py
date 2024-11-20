@@ -3,8 +3,8 @@ import time
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext
 
-from FallenRobot import StartTime, dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
+from RaidenRobot import StartTime, dispatcher
+from RaidenRobot.modules.disable import DisableAbleCommandHandler
 
 
 def get_readable_time(seconds: int) -> str:
@@ -52,9 +52,9 @@ def ping(update: Update, context: CallbackContext):
     )
 
 
-PING_HANDLER = DisableAbleCommandHandler("ping", ping, run_async=True)
+PING_HANDLER = DisableAbleCommandHandler("ping", ping)
 dispatcher.add_handler(PING_HANDLER)
 
-__command_list__ = ["ping"]
+__command_list__ = ["ping", "arise"]
 
 __handlers__ = [PING_HANDLER]
