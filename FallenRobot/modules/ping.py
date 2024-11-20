@@ -1,10 +1,9 @@
 import time
 
-from telegram import ParseMode, Update
-from telegram.ext import CallbackContext
-
 from RaidenRobot import StartTime, dispatcher
 from RaidenRobot.modules.disable import DisableAbleCommandHandler
+from telegram import ParseMode, Update
+from telegram.ext import CallbackContext
 
 
 def get_readable_time(seconds: int) -> str:
