@@ -16,6 +16,8 @@ class Config(object):
     # Telegraph link of the image which will be shown at start command.
     START_IMG = "https://files.catbox.moe/qs7igd.jpg"
 
+    DB_NAME = "Hanabi"
+    
     SUPPORT_CHAT = "lolpagalokigc"  # Your Telegram support group chat username where your users will go and bother you
 
     TOKEN = ""  # Get bot token from @BotFather on Telegram
