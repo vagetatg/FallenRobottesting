@@ -23,9 +23,8 @@ SOFTWARE.
 """
 
 # ""DEAR PRO PEOPLE,  DON'T REMOVE & CHANGE THIS LINE
-# TG :- @Abishnoi
-#     TG  :- Abishnoi_bots
-#     GITHUB :- Abishnoi69 ""
+# TG :- @xeno_kakarot
+#     GITHUB :- Gokukhan1 ""
 
 from . import AsuXdb as db
 
