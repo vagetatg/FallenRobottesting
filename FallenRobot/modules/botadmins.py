@@ -5,7 +5,7 @@
 # <============================================== IMPORTS =========================================================>
 
 from telegram import Update
-from telegram.constants import ParseMode
+from telegram import ParseMode
 from telegram.error import TelegramError
 from telegram.ext import CommandHandler, ContextTypes
 
