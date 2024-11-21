@@ -150,11 +150,6 @@ __mod_name__ = "F-Sab 🪠"
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
 # """
-from FallenRobot.modules.language import gs
-
-
-def get_help(chat):
-    return gs(chat, "fsub_help")
 
 
 # """
