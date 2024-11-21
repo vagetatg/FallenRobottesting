@@ -155,6 +155,10 @@ telethn = TelegramClient("Fallen", API_ID, API_HASH)
 
 pbot = Client("FallenRobot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
+# <============================================== INITIALIZE APPLICATION =========================================================>
+# Initialize the application builder and add a handler
+dispatcher = Application.builder().token(TOKEN).build()
+function = dispatcher.add_handler
 
 print("[INFO]: Getting Bot Info...")
 BOT_ID = dispatcher.bot.id
