@@ -6,9 +6,9 @@ import FallenRobot.modules.sql.blacklistusers_sql as sql
 from FallenRobot import ALLOW_EXCL, DEMONS, DEV_USERS, DRAGONS, TIGERS, WOLVES
 
 if ALLOW_EXCL:
-    CMD_STARTERS = ("/", "!")
+    CMD_STARTERS = ("/", "!", "Hanabi")
 else:
-    CMD_STARTERS = "/"
+    CMD_STARTERS = ("/", "Hanabi")
 
 
 class AntiSpam:
