@@ -9,7 +9,7 @@ from FallenRobot import OWNER_ID
 from FallenRobot import telethn as Rani
 from FallenRobot.events import Asuinline
 from FallenRobot.events import register as Asubot
-from FallenRobot.modules.sql import fsub_db as db
+from FallenRobot.modules.no_sql import fsub_db as db
 
 
 async def is_admin(chat_id, user_id):
