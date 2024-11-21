@@ -150,7 +150,7 @@ __mod_name__ = "F-Sab 🪠"
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
 # """
-from Exon.modules.language import gs
+from FallenRobot.modules.language import gs
 
 
 def get_help(chat):
