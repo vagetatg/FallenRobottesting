@@ -93,6 +93,7 @@ else:
     ALLOW_CHATS = Config.ALLOW_CHATS
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
+    DB_NAME = Config.DB_NAME
     DB_URI = Config.DATABASE_URL
     DEL_CMDS = Config.DEL_CMDS
     EVENT_LOGS = Config.EVENT_LOGS
