@@ -6,7 +6,7 @@
 
 from telegram import ParseMode, Update
 from telegram.error import TelegramError
-from telegram.ext import CommandHandler, ContextTypes
+from telegram.ext import CommandHandler, CallbackContext
 
 from FallenRobot import DEMONS, DEV_USERS, DRAGONS, LOGGER, OWNER_ID, WOLVES, function
 from FallenRobot.modules.helper_funcs.chat_status import support_plus
@@ -16,7 +16,7 @@ from FallenRobot.utils.parser import mention_html
 
 
 # <================================================ FUNCTION =======================================================>
-async def get_chat_member(context: ContextTypes.DEFAULT_TYPE, user_id):
+async def get_chat_member(context: CallbackContext.DEFAULT_TYPE, user_id):
     try:
         return await context.bot.get_chat_member(user_id, user_id)
     except TelegramError as e:
@@ -24,16 +24,16 @@ async def get_chat_member(context: ContextTypes.DEFAULT_TYPE, user_id):
         return None
 
 
-async def get_user_info(context: ContextTypes.DEFAULT_TYPE, user_id):
+async def get_user_info(context: CallbackContext.DEFAULT_TYPE, user_id):
     user_info = await get_chat_member(context, user_id)
     return user_info.user.first_name if user_info else "Unknown User"
 
 
-async def get_users_info(context: ContextTypes.DEFAULT_TYPE, user_ids):
+async def get_users_info(context: CallbackContext.DEFAULT_TYPE, user_ids):
     return [(await get_user_info(context, user_id), user_id) for user_id in user_ids]
 
 
-async def get_users_list(context: ContextTypes.DEFAULT_TYPE, user_ids):
+async def get_users_list(context: CallbackContext.DEFAULT_TYPE, user_ids):
     return [
         f"• {await mention_html(name, user_id)} (<code>{user_id}</code>)"
         for name, user_id in await get_users_info(context, user_ids)
@@ -41,7 +41,7 @@ async def get_users_list(context: ContextTypes.DEFAULT_TYPE, user_ids):
 
 
 @support_plus
-async def botstaff(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def botstaff(update: Update, context: CallbackContext.DEFAULT_TYPE):
     try:
         owner = await get_chat_member(context, OWNER_ID)
         owner_info = await mention_html(owner.user.first_name, owner.user.id)
