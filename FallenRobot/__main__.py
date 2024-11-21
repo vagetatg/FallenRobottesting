@@ -129,7 +129,7 @@ GROUP_START_BTN = [
 
 
 HELP_STRINGS = f"""
-  Main commands available: [ ](https://telegra.ph/file/ca85acf32b0c086c340b8.jpg)
+  Main commands available: [ ](https://files.catbox.moe/uiabmu.jpg)
  
  ➛ /help: PM's you this message.  
  ➛ /help <module name>: PM's you info about that module.
