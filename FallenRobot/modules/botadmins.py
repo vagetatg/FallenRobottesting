@@ -74,7 +74,7 @@ async def botstaff(update: Update, context: CallbackContext):
 
 
 # <================================================ HANDLER =======================================================>
-function(CommandHandler("botadmins", botstaff, block=False))
+function(CommandHandler("botadmins", botstaff))
 # <================================================ END =======================================================>
 
 
