@@ -16,7 +16,7 @@ from FallenRobot.utils.parser import mention_html
 
 
 # <================================================ FUNCTION =======================================================>
-async def get_chat_member(context: CallbackContext.DEFAULT_TYPE, user_id):
+async def get_chat_member(context: CallbackContext):
     try:
         return await context.bot.get_chat_member(user_id, user_id)
     except TelegramError as e:
@@ -24,16 +24,16 @@ async def get_chat_member(context: CallbackContext.DEFAULT_TYPE, user_id):
         return None
 
 
-async def get_user_info(context: CallbackContext.DEFAULT_TYPE, user_id):
+async def get_user_info(context: CallbackContext):
     user_info = await get_chat_member(context, user_id)
     return user_info.user.first_name if user_info else "Unknown User"
 
 
-async def get_users_info(context: CallbackContext.DEFAULT_TYPE, user_ids):
+async def get_users_info(context: CallbackContext):
     return [(await get_user_info(context, user_id), user_id) for user_id in user_ids]
 
 
-async def get_users_list(context: CallbackContext.DEFAULT_TYPE, user_ids):
+async def get_users_list(context: CallbackContext):
     return [
         f"• {await mention_html(name, user_id)} (<code>{user_id}</code>)"
         for name, user_id in await get_users_info(context, user_ids)
