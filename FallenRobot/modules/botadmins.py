@@ -41,7 +41,7 @@ async def get_users_list(context: CallbackContext):
 
 
 @support_plus
-async def botstaff(update: Update, context: CallbackContext.DEFAULT_TYPE):
+async def botstaff(update: Update, context: CallbackContext):
     try:
         owner = await get_chat_member(context, OWNER_ID)
         owner_info = await mention_html(owner.user.first_name, owner.user.id)
